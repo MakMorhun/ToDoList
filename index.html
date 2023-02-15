@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+<script defer src="./script.js"></script>
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="app__title">📋 ToDo List</h1>
+      <input
+        type="text"
+        class="app__input"
+        placeholder="Write something to do"
+      />
+      <div class="todos">
+        <div class="todos__uncompleted uncompleted">
+        <ul class="uncompleted__list list">
+          <!-- <li class="list__item item" data-id="1">
+           
+            <span> <input type="checkbox" class="item__checkbox"/> Some task</span> 
+            <a href="#"> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+             </svg> </a>
+          </li> -->
+        </ul>
+        <div class="todos__completed completed">
+          <h3 class="completed__title">Completed (1/3)</h3>
+          <ul class="completed__list list">
+            <!-- <li class="list__item item item-completed">
+              <span> <input type="checkbox" class="item__checkbox item__checkbox"/>Some task </span>
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+             </svg> </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
