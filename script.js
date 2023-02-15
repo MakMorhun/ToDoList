@@ -11,7 +11,8 @@ const save = function () {
   localStorage.setItem('todoList', JSON.stringify(todoList))
 }
 
-let todoList = load()
+let todoList = load() ?? []
+console.log(todoList)
 
 const generateMarkup = function (todo) {
   return `
