@@ -2,6 +2,7 @@ const input = document.querySelector('.app__input')
 const uncompleted = document.querySelector('.uncompleted__list')
 const completed = document.querySelector('.completed__list')
 const counter = document.querySelector('.completed__title')
+const form = document.querySelector('form')
 
 const load = function () {
   return JSON.parse(localStorage.getItem('todoList'))
@@ -82,18 +83,18 @@ window.addEventListener('load', () => {
   render()
 })
 
-input.addEventListener('keyup', function (e) {
-  if (e.code === 'Enter' && input.value) {
-    const todo = {
-      id: Date.now() + '',
-      text: input.value,
-      completed: false,
-    }
-    todoList.push(todo)
-    input.value = ''
-    save()
-    render()
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
+  if (!input.value.trim()) return
+  const todo = {
+    id: Date.now() + '',
+    text: input.value,
+    completed: false,
   }
+  todoList.push(todo)
+  input.value = ''
+  save()
+  render()
 })
 
 uncompleted.addEventListener('click', function (e) {
