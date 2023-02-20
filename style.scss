@@ -60,11 +60,7 @@ a {
     margin-bottom: 4rem;
     font-size: 2.8rem;
   }
-  span {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+
   &__input {
     width: 100%;
     margin-bottom: 2rem;
@@ -92,9 +88,20 @@ a {
     background-color: #f4f4f4bd;
     color: #555555;
 
+    &__text {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      span {
+        display: inline-block;
+        overflow-wrap: anywhere;
+      }
+    }
+
     &__checkbox {
-      width: 20px;
-      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
       accent-color: lime;
     }
     &-completed {

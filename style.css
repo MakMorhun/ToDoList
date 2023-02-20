@@ -62,11 +62,6 @@ a {
   margin-bottom: 4rem;
   font-size: 2.8rem;
 }
-.app span {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 .app__input {
   width: 100%;
   margin-bottom: 2rem;
@@ -95,9 +90,18 @@ a {
   background-color: rgba(244, 244, 244, 0.7411764706);
   color: #555555;
 }
+.list .item__text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.list .item__text span {
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
 .list .item__checkbox {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   accent-color: lime;
 }
 .list .item-completed {

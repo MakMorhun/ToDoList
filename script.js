@@ -12,16 +12,15 @@ const save = function () {
 }
 
 let todoList = load() ?? []
-console.log(todoList)
 
 const generateMarkup = function (todo) {
   return `
             <li class="list__item item item${
               todo.completed ? '-completed' : ''
             }" data-id=${todo.id}>
-            <span> <input type="checkbox" class="item__checkbox" ${
+            <div class="item__text"> <input type="checkbox" class="item__checkbox" ${
               todo.completed ? 'checked' : ''
-            }/>${todo.text}</span> 
+            }/> <span> ${todo.text} <span></div> 
             <a href="#" class="delete"> 
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -92,6 +91,7 @@ input.addEventListener('keyup', function (e) {
     }
     todoList.push(todo)
     input.value = ''
+    save()
     render()
   }
 })
