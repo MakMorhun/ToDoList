@@ -6,9 +6,6 @@ html {
 }
 body {
   font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   background: url('./bg.jpg') center;
   background-size: cover;
@@ -49,8 +46,12 @@ a {
 }
 
 .app {
-  margin: 0 1rem;
-  width: 60rem;
+  margin: 10rem auto;
+
+  @media (max-width: 610px) {
+    margin: 10rem 1rem;
+  }
+  max-width: 60rem;
   color: #ffffffb0;
   background-color: #ffffff21;
   border-radius: 15px;
